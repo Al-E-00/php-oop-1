@@ -68,18 +68,3 @@ $movie = [
 </body>
 
 </html>
-
-
-<!-- foreach ($movie as $key => $value) {
-echo $value->title . '<br>';
-echo $value->year . '<br>';
-echo $value->director . '<br>';
-echo $value->genre . '<br>';
-echo $value->rating . '<br>';
-echo $value->image . '<br>';
-echo $value->description . '<br>';
-echo $value->mainActor . '<br>';
-echo $value->mainActor2 . '<br>';
-echo $value->mainActor3 . '<br>';
-echo '<br>';
-} -->
