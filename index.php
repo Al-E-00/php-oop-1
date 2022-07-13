@@ -9,35 +9,32 @@ Movie class need to be defined.
 
 require_once('classes/Movies.php');
 $movie = [
-   [
-      $movie1 = new Movie('Inception', 2010, 'Christopher Nolan', 'Thriller', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg', 'A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a C.E.O.', 'Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Ellen Page')
-   ],
-   [
-      $movie2 = new Movie('Call Me By Your Name', 2017, 'Luca Guadagnino', 'Drama', '7.8', 'https://upload.wikimedia.org/wikipedia/en/c/c9/CallMeByYourName2017.png', 'In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father\'s research assistant.', 'Timothée Chalamet', 'Armie Hammer', 'Michael Stuhlbarg')
-   ],
-   [
-      $movie3 = new Movie('Eternal Sunshine of the Spotless Mind', 2004, 'Michel Gondry', 'Drama', '8.3', 'https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_.jpg', 'When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.', 'Jim Carrey', 'Kate Winslet', 'Tom Wilkinson')
-   ],
-   [
+
+      $movie1 = new Movie('Inception', 2010, 'Christopher Nolan', 'Thriller', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg', 'A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a C.E.O.', 'Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Ellen Page'),
+
+      $movie2 = new Movie('Call Me By Your Name', 2017, 'Luca Guadagnino', 'Drama', '7.8', 'https://upload.wikimedia.org/wikipedia/en/c/c9/CallMeByYourName2017.png', 'In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father\'s research assistant.', 'Timothée Chalamet', 'Armie Hammer', 'Michael Stuhlbarg'),
+
+
+      $movie3 = new Movie('Eternal Sunshine of the Spotless Mind', 2004, 'Michel Gondry', 'Drama', '8.3', 'https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_.jpg', 'When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.', 'Jim Carrey', 'Kate Winslet', 'Tom Wilkinson'),
+
+
       $movie4 = new Movie('The Exorcist', 1973, 'William Peter Blatty', 'Horror', '8.1', 'https://m.media-amazon.com/images/M/MV5BMTUxMjQyNzkxMV5BMl5BanBnXkFtZTcwMzc4MjEzMw@@._V1_SY1000_CR0,0,674,1000_AL_.jpg', 'A single-family detached house is visited by a strange visitor who takes the family apart, making them a living and a dying figure.', 'Ellen Burstyn', 'Jodie Foster', 'Tom Hanks')
-   ]
+
 ];
 
 var_dump($movie);
-var_dump($movie2);
-var_dump($movie3);
-var_dump($movie4);
+
 
 foreach ($movie as $key => $value) {
-   echo $value[$key]->title . '<br>';
-   echo $value[$key]->year . '<br>';
-   echo $value[$key]->director . '<br>';
-   echo $value[$key]->genre . '<br>';
-   echo $value[$key]->rating . '<br>';
-   echo $value[$key]->image . '<br>';
-   echo $value[$key]->description . '<br>';
-   echo $value[$key]->mainActor . '<br>';
-   echo $value[$key]->mainActor2 . '<br>';
-   echo $value[$key]->mainActor3 . '<br>';
+   echo $value->title . '<br>';
+   echo $value->year . '<br>';
+   echo $value->director . '<br>';
+   echo $value->genre . '<br>';
+   echo $value->rating . '<br>';
+   echo $value->image . '<br>';
+   echo $value->description . '<br>';
+   echo $value->mainActor . '<br>';
+   echo $value->mainActor2 . '<br>';
+   echo $value->mainActor3 . '<br>';
    echo '<br>';
 }
