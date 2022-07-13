@@ -13,7 +13,7 @@ $movie = [
    $movie1 = new Movie('Inception', 2010, 'Christopher Nolan', 'Thriller', '8.8', 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY1000_CR0,0,675,1000_AL_.jpg', 'A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a C.E.O.', 'Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Ellen Page'),
    $movie2 = new Movie('Call Me By Your Name', 2017, 'Luca Guadagnino', 'Drama', '7.8', 'https://m.media-amazon.com/images/M/MV5BMDU5YjI5N2ItNTBkZS00MTBkLTg4NTUtMjg5NjcxNGQ4ODEwXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_.jpg', 'In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father\'s research assistant.', 'Timothée Chalamet', 'Armie Hammer', 'Michael Stuhlbarg'),
    $movie3 = new Movie('Eternal Sunshine of the Spotless Mind', 2004, 'Michel Gondry', 'Drama', '8.3', 'https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_.jpg', 'When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.', 'Jim Carrey', 'Kate Winslet', 'Tom Wilkinson'),
-   $movie4 = new Movie('The Exorcist', 1973, 'William Peter Blatty', 'Horror', '8.1', 'https://m.media-amazon.com/images/M/MV5BMTUxMjQyNzkxMV5BMl5BanBnXkFtZTcwMzc4MjEzMw@@._V1_SY1000_CR0,0,674,1000_AL_.jpg', 'A single-family detached house is visited by a strange visitor who takes the family apart, making them a living and a dying figure.', 'Ellen Burstyn', 'Jodie Foster', 'Tom Hanks')
+   $movie4 = new Movie('The Exorcist', 1973, 'William Peter Blatty', 'Horror', '8.1', 'https://cdn.shopify.com/s/files/1/0037/8008/3782/files/The_Exorcist_movie_poster_600x600.jpg?v=1632160332', 'A single-family detached house is visited by a strange visitor who takes the family apart, making them a living and a dying figure.', 'Ellen Burstyn', 'Jodie Foster', 'Tom Hanks')
 
 ];
 
@@ -29,21 +29,14 @@ $movie = [
    <title>Movies card</title>
 
    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css' integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==' crossorigin='anonymous' />
-   <link rel="stylesheet" type="text/css" href="glider.css">
-
-   <script>
-      window.addEventListener('load', function() {
-         new Glider(document.querySelector('.glider'), {
-            setting-name: setting-value
-         })
-      })
-   </script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+   
 </head>
 
 <body>
    <div class="container">
       <div class="row">
-         <div class="col">
+         <div class="col-3">
             <div class="glider-container">
                <div class="glider">
                   <?php foreach ($movie as $movie) { ?>
@@ -59,18 +52,19 @@ $movie = [
                            <p class="card-text"><?php echo $movie->getAgePublicSuggested(); ?></p>
                         </div>
                      </div>
-                  <?php } ?>
-
-                  <button aria-label="Previous" class="glider-prev">«</button>
-                  <button aria-label="Next" class="glider-next">»</button>
-                  <div role="tablist" class="dots"></div>
+                     <?php } ?>
+                  </div>
+                     
+                     <button aria-label="Previous" class="glider-prev">«</button>
+                     <button aria-label="Next" class="glider-next">»</button>
+                     <div role="tablist" class="dots"></div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-   <script src="glider.js"></script>
-   <script src="app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+      <script src="app.js"></script>
+      <script src="glider.js"></script>
 </body>
 
 </html>
