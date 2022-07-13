@@ -29,15 +29,15 @@ var_dump($movie3);
 var_dump($movie4);
 
 foreach ($movie as $key => $value) {
-   echo $value->title . '<br>';
-   echo $value->year . '<br>';
-   echo $value->director . '<br>';
-   echo $value->genre . '<br>';
-   echo $value->rating . '<br>';
-   echo $value->image . '<br>';
-   echo $value->description . '<br>';
-   echo $value->mainActor . '<br>';
-   echo $value->mainActor2 . '<br>';
-   echo $value->mainActor3 . '<br>';
+   echo $value[$key]->title . '<br>';
+   echo $value[$key]->year . '<br>';
+   echo $value[$key]->director . '<br>';
+   echo $value[$key]->genre . '<br>';
+   echo $value[$key]->rating . '<br>';
+   echo $value[$key]->image . '<br>';
+   echo $value[$key]->description . '<br>';
+   echo $value[$key]->mainActor . '<br>';
+   echo $value[$key]->mainActor2 . '<br>';
+   echo $value[$key]->mainActor3 . '<br>';
    echo '<br>';
 }
