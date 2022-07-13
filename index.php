@@ -35,8 +35,8 @@ $movie = [
 
 <body>
    <div class="container">
-      <div class="row">
-         <div class="col-3">
+      <div class="row justify-content-center">
+         <div class="col-3 h-50">
             <div class="glider-container">
                <div class="glider">
                   <?php foreach ($movie as $movie) { ?>
@@ -44,19 +44,19 @@ $movie = [
                         <img src="<?php echo $movie->image; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                            <h5 class="card-title"><?php echo $movie->title; ?></h5>
-                           <p class="card-text"><?php echo $movie->description; ?></p>
-                           <p class="card-text"><?php echo $movie->mainActor; ?></p>
-                           <p class="card-text"><?php echo $movie->mainActor2; ?></p>
-                           <p class="card-text"><?php echo $movie->mainActor3; ?></p>
-                           <p class="card-text"><?php echo $movie->getYearsOfMovie(); ?></p>
-                           <p class="card-text"><?php echo $movie->getAgePublicSuggested(); ?></p>
+                           <p class="card-text"><strong>Description: </strong><?php echo $movie->description; ?></p>
+                           <p class="card-text"><strong>Main actor 1: </strong><?php echo $movie->mainActor; ?></p>
+                           <p class="card-text"><strong>Main actor 2: </strong><?php echo $movie->mainActor2; ?></p>
+                           <p class="card-text"><strong>Main actor 3: </strong><?php echo $movie->mainActor3; ?></p>
+                           <p class="card-text"><strong>Movie years: </strong><?php echo $movie->getYearsOfMovie(); ?></p>
+                           <p class="card-text"><strong>Age suggested: </strong><?php echo $movie->getAgePublicSuggested(); ?></p>
                         </div>
                      </div>
                      <?php } ?>
                   </div>
                      
-                     <button aria-label="Previous" class="glider-prev">«</button>
-                     <button aria-label="Next" class="glider-next">»</button>
+                     <button aria-label="Previous" class="glider-prev btn btn-primary">«</button>
+                     <button aria-label="Next" class="glider-next  btn btn-primary">»</button>
                      <div role="tablist" class="dots"></div>
                </div>
             </div>
